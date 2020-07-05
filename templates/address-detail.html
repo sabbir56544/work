@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Area Details</h1>
+    <hr>
+    <p><b>Area_no</b> : {{ areas.area_no }}</p>
+    <p><b>Area_size</b> : {{ areas.area_size }}</p>
+    <p><b>Area_name</b>  : {{ areas.area_name }} </p>
+    <p><b>Area_Discription</b>  : {{ areas.area_disc }}</p>
+    <a href="{% url 'address-list' %}">Address List</a>
+  </div>
+{% endblock %}
+

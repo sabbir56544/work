@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} Area List {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Area List</h1>
+    <table class = "table table-striped">
+      <thead>
+       <tr>
+         <th>Area_no</th>
+         <th>Area_name</th>
+         <th>Area_size</th>
+
+       </tr>
+      </thead>
+      <tbody>
+        {% for areas in area %}
+         <tr>
+           <td><a href="{% url 'address-detail' areas.area_no %}"> {{ areas.area_no }}</a></td>
+           <td> {{ areas.area_name }} </td>
+           <td> {{ areas.area_size }}</td>  
+         </tr>
+        {% endfor %}
+      </tbody> 
+    </table>
+  </div>
+
+
+{% endblock %}
+

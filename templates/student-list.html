@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %} Student List {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Student List</h1>
+    <table class = "table table-striped">
+      <thead>
+       <tr>
+         <th>Roll</th>
+         <th>Name</th>
+         <th>Gender</th>
+         <th>Age</th>
+         <th>Group</th>
+
+       </tr>
+      </thead>
+      <tbody>
+        {% for students in student %}
+         <tr>
+           <td><a href="{% url 'student-detail' students.roll %}">{{ students.roll}} </a></td>
+           <td> {{ students.name}} </td>
+           <td> {{ students.gender}}</td>
+           <td> {{ students.age}}</td>
+           <td> {{ students.group}}</td>
+
+           
+         </tr>
+        {% endfor %}
+      </tbody> 
+    </table>
+  </div>
+    
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
